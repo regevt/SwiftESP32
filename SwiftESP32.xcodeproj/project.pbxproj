@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		00CA260A21514DD7004B23DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA260921514DD7004B23DA /* AppDelegate.swift */; };
-		00CA260C21514DD7004B23DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA260B21514DD7004B23DA /* ViewController.swift */; };
+		00CA260C21514DD7004B23DA /* BLEDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA260B21514DD7004B23DA /* BLEDevicesViewController.swift */; };
 		00CA260F21514DD7004B23DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CA260D21514DD7004B23DA /* Main.storyboard */; };
 		00CA261121514DD8004B23DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00CA261021514DD8004B23DA /* Assets.xcassets */; };
 		00CA261421514DD8004B23DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CA261221514DD8004B23DA /* LaunchScreen.storyboard */; };
+		00CA261D2151625D004B23DA /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA261C2151625D004B23DA /* BluetoothManager.swift */; };
+		00CA261F21523B6B004B23DA /* BluetoothManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA261E21523B6B004B23DA /* BluetoothManagerProtocol.swift */; };
+		00CA262221524097004B23DA /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA262121524097004B23DA /* DeviceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00CA260621514DD7004B23DA /* SwiftESP32.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftESP32.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CA260921514DD7004B23DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00CA260B21514DD7004B23DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00CA260B21514DD7004B23DA /* BLEDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDevicesViewController.swift; sourceTree = "<group>"; };
 		00CA260E21514DD7004B23DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00CA261021514DD8004B23DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00CA261321514DD8004B23DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00CA261521514DD8004B23DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00CA261C2151625D004B23DA /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		00CA261E21523B6B004B23DA /* BluetoothManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManagerProtocol.swift; sourceTree = "<group>"; };
+		00CA262121524097004B23DA /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,33 @@
 		00CA260821514DD7004B23DA /* SwiftESP32 */ = {
 			isa = PBXGroup;
 			children = (
+				00CA26202152407D004B23DA /* Models */,
+				00CA261B21516211004B23DA /* BluetoothService */,
 				00CA260921514DD7004B23DA /* AppDelegate.swift */,
-				00CA260B21514DD7004B23DA /* ViewController.swift */,
+				00CA260B21514DD7004B23DA /* BLEDevicesViewController.swift */,
 				00CA260D21514DD7004B23DA /* Main.storyboard */,
 				00CA261021514DD8004B23DA /* Assets.xcassets */,
 				00CA261221514DD8004B23DA /* LaunchScreen.storyboard */,
 				00CA261521514DD8004B23DA /* Info.plist */,
 			);
 			path = SwiftESP32;
+			sourceTree = "<group>";
+		};
+		00CA261B21516211004B23DA /* BluetoothService */ = {
+			isa = PBXGroup;
+			children = (
+				00CA261C2151625D004B23DA /* BluetoothManager.swift */,
+				00CA261E21523B6B004B23DA /* BluetoothManagerProtocol.swift */,
+			);
+			path = BluetoothService;
+			sourceTree = "<group>";
+		};
+		00CA26202152407D004B23DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00CA262121524097004B23DA /* DeviceModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00CA260C21514DD7004B23DA /* ViewController.swift in Sources */,
+				00CA261F21523B6B004B23DA /* BluetoothManagerProtocol.swift in Sources */,
+				00CA260C21514DD7004B23DA /* BLEDevicesViewController.swift in Sources */,
+				00CA262221524097004B23DA /* DeviceModel.swift in Sources */,
+				00CA261D2151625D004B23DA /* BluetoothManager.swift in Sources */,
 				00CA260A21514DD7004B23DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YST5YY8UCN;
 				INFOPLIST_FILE = SwiftESP32/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YST5YY8UCN;
 				INFOPLIST_FILE = SwiftESP32/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
