@@ -15,6 +15,7 @@
 		00CA261D2151625D004B23DA /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA261C2151625D004B23DA /* BluetoothManager.swift */; };
 		00CA261F21523B6B004B23DA /* BluetoothManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA261E21523B6B004B23DA /* BluetoothManagerProtocol.swift */; };
 		00CA262221524097004B23DA /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA262121524097004B23DA /* DeviceModel.swift */; };
+		00CA262421541B4E004B23DA /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA262321541B4E004B23DA /* AppConst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		00CA261C2151625D004B23DA /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		00CA261E21523B6B004B23DA /* BluetoothManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManagerProtocol.swift; sourceTree = "<group>"; };
 		00CA262121524097004B23DA /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		00CA262321541B4E004B23DA /* AppConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				00CA261021514DD8004B23DA /* Assets.xcassets */,
 				00CA261221514DD8004B23DA /* LaunchScreen.storyboard */,
 				00CA261521514DD8004B23DA /* Info.plist */,
+				00CA262321541B4E004B23DA /* AppConst.swift */,
 			);
 			path = SwiftESP32;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				00CA261F21523B6B004B23DA /* BluetoothManagerProtocol.swift in Sources */,
 				00CA260C21514DD7004B23DA /* BLEDevicesViewController.swift in Sources */,
 				00CA262221524097004B23DA /* DeviceModel.swift in Sources */,
+				00CA262421541B4E004B23DA /* AppConst.swift in Sources */,
 				00CA261D2151625D004B23DA /* BluetoothManager.swift in Sources */,
 				00CA260A21514DD7004B23DA /* AppDelegate.swift in Sources */,
 			);

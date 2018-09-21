@@ -27,18 +27,45 @@ class  BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
     
     // MARK: - Central Manager
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        if central.state == .poweredOn{
-            central.scanForPeripherals(withServices: nil)
+        if centralManager?.state == .poweredOn{
+            centralManager?.scanForPeripherals(withServices: nil)
         }
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        
         let periphName = peripheral.name ?? peripheral.identifier.uuidString
         
         if !deviceList.contains(periphName){
-            deviceList.append(periphName)
-            devicePeripherals.append(peripheral)
-            BluetoothManagerDelegate?.DeviceDidDiscoverd(deviceName: periphName, deviceIdentifier: peripheral.identifier.uuidString)
+            if !deviceList.contains(periphName){
+                devicePeripherals.append(peripheral)
+                peripheral.delegate = self
+                centralManager?.connect(peripheral)
+            }
+        }
+    }
+    
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        if peripheral.state == .connected{
+            peripheral.discoverServices(nil)
+        }
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+        
+        let periphName = peripheral.name ?? peripheral.identifier.uuidString
+        
+        if error == nil{
+            for service in peripheral.services!{
+                if service.uuid.uuidString.lowercased() == SERVICE_UUID.uuidString.lowercased() && !deviceList.contains(periphName){
+                    deviceList.append(periphName)
+                    BluetoothManagerDelegate?.DeviceDidDiscoverd(deviceName: periphName, deviceIdentifier: peripheral.identifier.uuidString)
+                }
+            }
+        }
+        
+        if peripheral.state == .connected{
+            centralManager?.cancelPeripheralConnection(peripheral)
         }
     }
 }
