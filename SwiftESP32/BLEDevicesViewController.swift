@@ -15,6 +15,8 @@ class BLEDevicesViewController: UIViewController, UITableViewDelegate, UITableVi
     var Devices: [Int: DeviceModel] = [:]
     var bluetoothManager: BluetoothManager?
     
+    var SelectedDevice:DeviceModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         DeviceListTableView.delegate = self
@@ -32,6 +34,18 @@ class BLEDevicesViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell: UITableViewCell = UITableViewCell()
         cell.textLabel?.text = Devices[indexPath.row]?.DeviceName
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (Devices.keys.contains(indexPath.row)){
+            SelectedDevice = Devices[indexPath.row]!
+            performSegue(withIdentifier: "GoToSetColorSegue", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let _setColorViewController:SetColorViewController = segue.destination as! SetColorViewController
+        _setColorViewController.DeviceModel = SelectedDevice
     }
     
     // MARK: - BluetoothManager

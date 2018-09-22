@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001B7C0A21568B8A006212B6 /* SetColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B7C0921568B8A006212B6 /* SetColorViewController.swift */; };
 		00CA260A21514DD7004B23DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA260921514DD7004B23DA /* AppDelegate.swift */; };
 		00CA260C21514DD7004B23DA /* BLEDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA260B21514DD7004B23DA /* BLEDevicesViewController.swift */; };
 		00CA260F21514DD7004B23DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CA260D21514DD7004B23DA /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		001B7C0921568B8A006212B6 /* SetColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColorViewController.swift; sourceTree = "<group>"; };
 		00CA260621514DD7004B23DA /* SwiftESP32.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftESP32.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CA260921514DD7004B23DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00CA260B21514DD7004B23DA /* BLEDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDevicesViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				00CA261221514DD8004B23DA /* LaunchScreen.storyboard */,
 				00CA261521514DD8004B23DA /* Info.plist */,
 				00CA262321541B4E004B23DA /* AppConst.swift */,
+				001B7C0921568B8A006212B6 /* SetColorViewController.swift */,
 			);
 			path = SwiftESP32;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				00CA260C21514DD7004B23DA /* BLEDevicesViewController.swift in Sources */,
 				00CA262221524097004B23DA /* DeviceModel.swift in Sources */,
 				00CA262421541B4E004B23DA /* AppConst.swift in Sources */,
+				001B7C0A21568B8A006212B6 /* SetColorViewController.swift in Sources */,
 				00CA261D2151625D004B23DA /* BluetoothManager.swift in Sources */,
 				00CA260A21514DD7004B23DA /* AppDelegate.swift in Sources */,
 			);
