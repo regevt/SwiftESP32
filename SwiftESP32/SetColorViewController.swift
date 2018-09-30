@@ -16,22 +16,20 @@ class SetColorViewController: UIViewController {
     @IBOutlet var SetColorView: UIView!
     
     var DeviceModel: DeviceModel?
+    var bluetoothManager: BluetoothManager?
     
     override func viewDidLoad() {
-      
-    }
-    
-    @IBAction func SetColorAction(_ sender: Any) {
-        
-        print(256 * RedSlider!.value)
-        print(256 * GreenSlider!.value)
-        print(256 * BlueSlider!.value)
     }
     
     @IBAction func SliderValueChanged(_ sender: Any) {
         SetColorView.backgroundColor = UIColor(red: CGFloat(RedSlider!.value),
-                                             green: CGFloat(GreenSlider!.value),
-                                             blue: CGFloat(BlueSlider!.value),
-                                             alpha: 1)
+                                               green: CGFloat(GreenSlider!.value),
+                                               blue: CGFloat(BlueSlider!.value),
+                                               alpha: 1)
+    }
+
+    @IBAction func SliderValueChangeEnded(_ sender: Any) {
+        let data: String = "\( Int(256 * RedSlider!.value)),\( Int(256 * GreenSlider!.value)),\( Int(256 * BlueSlider!.value))"
+        bluetoothManager?.SetBleValue(value: data, peripheralID: (DeviceModel?.DeviceIdentifier)!)
     }
 }

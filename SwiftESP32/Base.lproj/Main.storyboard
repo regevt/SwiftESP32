@@ -73,6 +73,7 @@
                                     <constraint firstAttribute="height" constant="29" id="MGU-0S-fvT"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="SliderValueChangeEnded:" destination="B1S-dQ-ETD" eventType="touchUpInside" id="mFs-7y-fvI"/>
                                     <action selector="SliderValueChanged:" destination="B1S-dQ-ETD" eventType="valueChanged" id="ujc-2i-ycu"/>
                                 </connections>
                             </slider>
@@ -82,6 +83,7 @@
                                     <constraint firstAttribute="height" constant="29" id="xr5-Zl-Nnw"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="SliderValueChangeEnded:" destination="B1S-dQ-ETD" eventType="touchUpInside" id="f6x-6m-tLK"/>
                                     <action selector="SliderValueChanged:" destination="B1S-dQ-ETD" eventType="valueChanged" id="vWH-Ky-dal"/>
                                 </connections>
                             </slider>
@@ -91,16 +93,10 @@
                                     <constraint firstAttribute="height" constant="29" id="c2a-7r-fTa"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="SliderValueChangeEnded:" destination="B1S-dQ-ETD" eventType="touchUpInside" id="7Vl-zT-StD"/>
                                     <action selector="SliderValueChanged:" destination="B1S-dQ-ETD" eventType="valueChanged" id="3cQ-0n-Qfb"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpd-Mh-nTC">
-                                <rect key="frame" x="135" y="404" width="105" height="30"/>
-                                <state key="normal" title="Set color"/>
-                                <connections>
-                                    <action selector="SetColorAction:" destination="B1S-dQ-ETD" eventType="touchUpInside" id="71a-Es-kI4"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQp-ZC-OSQ">
                                 <rect key="frame" x="30" y="206" width="315" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -124,12 +120,9 @@
                         <constraints>
                             <constraint firstItem="iG8-gN-79m" firstAttribute="leading" secondItem="cSc-oQ-5fx" secondAttribute="leading" constant="30" id="26a-ei-duZ"/>
                             <constraint firstItem="oMw-pg-hdI" firstAttribute="top" secondItem="5sZ-7f-DWc" secondAttribute="bottom" constant="8" id="2n3-0V-pAV"/>
-                            <constraint firstItem="kpd-Mh-nTC" firstAttribute="top" secondItem="iG8-gN-79m" secondAttribute="bottom" constant="8" id="3fe-yQ-NhS"/>
                             <constraint firstItem="UQp-ZC-OSQ" firstAttribute="leading" secondItem="cSc-oQ-5fx" secondAttribute="leading" constant="30" id="40A-e0-ppF"/>
                             <constraint firstItem="cSc-oQ-5fx" firstAttribute="trailing" secondItem="oMw-pg-hdI" secondAttribute="trailing" constant="30" id="5KT-NF-UGX"/>
-                            <constraint firstItem="cSc-oQ-5fx" firstAttribute="bottom" secondItem="kpd-Mh-nTC" secondAttribute="bottom" constant="233" id="Df3-BG-MZF"/>
                             <constraint firstItem="cSc-oQ-5fx" firstAttribute="trailing" secondItem="u9x-LP-x5U" secondAttribute="trailing" constant="30" id="EHf-2e-YYT"/>
-                            <constraint firstItem="kpd-Mh-nTC" firstAttribute="leading" secondItem="cSc-oQ-5fx" secondAttribute="leading" constant="135" id="F31-kd-XtT"/>
                             <constraint firstItem="rkV-nj-Qz8" firstAttribute="leading" secondItem="cSc-oQ-5fx" secondAttribute="leading" constant="30" id="KbT-6e-2eb"/>
                             <constraint firstItem="UQp-ZC-OSQ" firstAttribute="top" secondItem="cSc-oQ-5fx" secondAttribute="top" constant="142" id="LWc-aC-xds"/>
                             <constraint firstItem="iG8-gN-79m" firstAttribute="top" secondItem="oMw-pg-hdI" secondAttribute="bottom" constant="8" id="MqK-cr-byS"/>
@@ -146,8 +139,6 @@
                             <constraint firstItem="iG8-gN-79m" firstAttribute="top" secondItem="oMw-pg-hdI" secondAttribute="bottom" constant="8" id="i0Z-5v-Wia"/>
                             <constraint firstItem="5sZ-7f-DWc" firstAttribute="leading" secondItem="cSc-oQ-5fx" secondAttribute="leading" constant="30" id="ju3-xY-2ie"/>
                             <constraint firstItem="5sZ-7f-DWc" firstAttribute="top" secondItem="rkV-nj-Qz8" secondAttribute="bottom" constant="8" id="lrD-SV-Ddu"/>
-                            <constraint firstItem="cSc-oQ-5fx" firstAttribute="trailing" secondItem="kpd-Mh-nTC" secondAttribute="trailing" constant="135" id="oQB-OP-RYJ"/>
-                            <constraint firstItem="kpd-Mh-nTC" firstAttribute="top" secondItem="iG8-gN-79m" secondAttribute="bottom" constant="8" id="t4p-qy-BMj"/>
                             <constraint firstItem="oMw-pg-hdI" firstAttribute="leading" secondItem="cSc-oQ-5fx" secondAttribute="leading" constant="30" id="veD-0C-jzc"/>
                             <constraint firstItem="cSc-oQ-5fx" firstAttribute="trailing" secondItem="iG8-gN-79m" secondAttribute="trailing" constant="30" id="wBZ-9U-ecQ"/>
                         </constraints>

@@ -39,6 +39,8 @@ class BLEDevicesViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (Devices.keys.contains(indexPath.row)){
             SelectedDevice = Devices[indexPath.row]!
+            
+            bluetoothManager?.SetBleValue(value: "dgdsfg", peripheralID: (SelectedDevice?.DeviceIdentifier)!)
             performSegue(withIdentifier: "GoToSetColorSegue", sender: self)
         }
     }
@@ -46,6 +48,7 @@ class BLEDevicesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let _setColorViewController:SetColorViewController = segue.destination as! SetColorViewController
         _setColorViewController.DeviceModel = SelectedDevice
+        _setColorViewController.bluetoothManager = bluetoothManager
     }
     
     // MARK: - BluetoothManager
